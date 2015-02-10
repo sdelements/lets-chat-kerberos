@@ -1,0 +1,27 @@
+{
+  "name": "lets-chat-kerberos",
+  "version": "0.2.0",
+  "description": "Kerberos add-on for Let's Chat",
+  "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/sdelements/lets-chat-kerberos.git"
+  },
+  "author": {
+    "name": "Simon Bartlett",
+    "email": "simon@sdelements.com"
+  },
+  "bugs": {
+    "url": "https://github.com/sdelements/lets-chat-kerberos/issues"
+  },
+  "homepage": "https://github.com/sdelements/lets-chat-kerberos",
+  "dependencies": {
+    "passport-kerberos": "0.0.1"
+  },
+  "peerDependencies": {
+    "lets-chat-ldap": "^0.2.0",
+    "lodash": "^3.1.0",
+    "mongoose": "~3.8.22",
+    "passport": "^0.2.1"
+  }
+}
