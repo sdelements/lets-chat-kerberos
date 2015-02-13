@@ -2,6 +2,11 @@
 
 Add Kerberos authentication to [Let's Chat](http://sdelements.github.io/lets-chat/).
 
+## Node 0.10.x required!
+[See ticket for more information](https://github.com/sdelements/lets-chat-kerberos/issues/1)
+
+## Installation
+
 ### Prerequisites
 
 ###### Mac
@@ -20,6 +25,8 @@ npm install lets-chat-kerberos
 ```
 
 ### Configure
+
+Add these settings to your ```settings.yml``` file:
 
 ```
 auth:
