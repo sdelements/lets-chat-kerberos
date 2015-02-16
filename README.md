@@ -28,7 +28,7 @@ npm install lets-chat-kerberos
 
 Add these settings to your ```settings.yml``` file:
 
-```
+```yml
 auth:
   kerberos:
     realm: example.com
