@@ -26,7 +26,9 @@ npm install lets-chat-kerberos
 
 ### Configure
 
-Add these settings to your ```settings.yml``` file:
+##### YAML
+
+Add (and customize) these settings to your ```settings.yml``` file:
 
 ```yml
 auth:
@@ -40,7 +42,6 @@ auth:
         url: ldap://example.com
         tlsOptions:
           ca: ca.pem
-      server_certs: []
       bind_options:
         bindDN:
         bindCredentials:
@@ -49,11 +50,33 @@ auth:
         opts:
           scope: one
           filter: (uid={{username}})
-          attributes: []
       field_mappings:
-        uid: uid
+        uid: uid # LDAP unique ID
+        username: uid # used for mention (@uid)
         firstName: givenName
         lastName: sn
         displayName: givenName
         email: mail
 ```
+
+##### Environment Variables
+
+Alternatively, configure using environment variables:
+
+| YAML Path | Env Variable |
+|-----------|--------------|
+| | LCB_AUTH_KERBEROS_REALM |
+| | LCB_AUTH_KERBEROS_USE_LDAP_AUTHORIZATION |
+| | LCB_AUTH_KERBEROS_LDAP_CONNECT_SETTINGS_URL |
+| | LCB_AUTH_KERBEROS_LDAP_CONNECT_SETTINGS_TLS_OPTIONS_CA |
+| | LCB_AUTH_KERBEROS_LDAP_BIND_OPTIONS_BIND_DN |
+| | LCB_AUTH_KERBEROS_LDAP_BIND_OPTIONS_BIND_CREDENTIALS |
+| | LCB_AUTH_KERBEROS_LDAP_SEARCH_BASE |
+| | LCB_AUTH_KERBEROS_LDAP_SEARCH_OPTS_SCOPE |
+| | LCB_AUTH_KERBEROS_LDAP_SEARCH_OPTS_FILTER |
+| | LCB_AUTH_KERBEROS_LDAP_FIELD_MAPPINGS_UID |
+| | LCB_AUTH_KERBEROS_LDAP_FIELD_MAPPINGS_USERNAME |
+| | LCB_AUTH_KERBEROS_LDAP_FIELD_MAPPINGS_FIRST_NAME |
+| | LCB_AUTH_KERBEROS_LDAP_FIELD_MAPPINGS_LAST_NAME |
+| | LCB_AUTH_KERBEROS_LDAP_FIELD_MAPPINGS_DISPLAY_NAME |
+| | LCB_AUTH_KERBEROS_LDAP_FIELD_MAPPINGS_EMAIL |
