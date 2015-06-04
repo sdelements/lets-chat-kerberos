@@ -21,6 +21,7 @@ You'll need to install [MIT Kerberos for Windows](http://web.mit.edu/kerberos/di
 ### Install
 
 ```
+npm install lets-chat-ldap
 npm install lets-chat-kerberos
 ```
 
