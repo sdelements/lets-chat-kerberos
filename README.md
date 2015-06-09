@@ -18,6 +18,12 @@ You'll need to install the Kerberos 5 development headers package. It may be cal
 ###### Windows
 You'll need to install [MIT Kerberos for Windows](http://web.mit.edu/kerberos/dist/#kfw-4.0) (with SDK option checked).
 
+This module depends on node-krb5, so installation instructions for that module should be taken into account. On Windows you must set the environment variable MITKRB5 to the MIT Kerberos home.
+
+```
+set MITKRB5=C:\Program Files\MIT\Kerberos
+```
+
 ### Install
 
 ```
